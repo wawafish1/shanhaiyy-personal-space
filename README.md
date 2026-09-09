@@ -4,8 +4,8 @@
 
 ## 在线访问
 
-- 当前服务器预览：[http://43.108.22.156](http://43.108.22.156)
-- 计划域名：`https://shanhaiyy.xyz`（域名审核和 DNS/HTTPS 待完成）
+- 正式网站：[https://shanhaiyy.xyz](https://shanhaiyy.xyz)
+- `http://shanhaiyy.xyz` 会自动升级到 HTTPS，`www.shanhaiyy.xyz` 会跳转到主域名。
 
 ## 本地运行
 

@@ -1,5 +1,15 @@
-# Personal space (temporary HTTP while domain registration and DNS are pending)
-http://shanhaiyy.xyz, http://www.shanhaiyy.xyz, http://43.108.22.156 {
+# Personal space — canonical HTTPS domain
+shanhaiyy.xyz {
+    encode zstd gzip
+    reverse_proxy personal-space-site:80
+}
+
+www.shanhaiyy.xyz {
+    redir https://shanhaiyy.xyz{uri} permanent
+}
+
+# Keep direct-IP HTTP access as an operational fallback.
+http://43.108.22.156 {
     encode zstd gzip
     reverse_proxy personal-space-site:80
 }
