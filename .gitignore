@@ -1,0 +1,30 @@
+# Local and generated review material
+preview/
+AUDIT-NEXT.md
+DESIGN.md
+PORTRAIT-EDIT.md
+design-board.html
+assets/portrait.jpg
+assets/writing-evidence.jpg
+assets/favicon.svg
+
+# Source documents and deployment artifacts
+*.docx
+*.tar
+*.tar.gz
+.deploy/
+
+# Secrets and local configuration
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Dependencies and caches
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

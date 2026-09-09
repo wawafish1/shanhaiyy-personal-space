@@ -1,0 +1,48 @@
+/* Final responsive refinements, shared by live preview and Figma handoff. */
+.title-accent{display:inline}
+@media(min-width:801px){.hero{padding-top:76px;padding-bottom:65px}}
+@media(max-width:560px){.hero-portrait{top:204px}}
+.phone-mockup{height:356px}
+@media(max-width:800px){.phone-mockup{height:293px}}
+@media(max-width:560px){.phone-mockup{height:263px}}
+:root{--muted:#626c60}
+.hero-detail{font-size:14px}
+.field-top>p{font-size:14px}
+.field-case-copy>p{font-size:13px}
+.case-outcomes p{font-size:13px}
+.project-copy>p{font-size:13px}
+.project-features p{font-size:12px}
+.content-grid p,.beyond-copy>p{font-size:13px}
+.background-list p{font-size:12px}
+.field-photo{height:100%;min-height:310px}
+@media(max-width:800px){
+  .hero-detail{font-size:12px}
+  .field-top>p{font-size:12px}
+  .field-case-copy>p{font-size:12px}
+  .case-outcomes p{font-size:12px}
+  .project-copy>p{font-size:12px}
+  .project-features p{font-size:11px}
+}
+@media(max-width:560px){
+  .hero-detail{font-size:12px;line-height:1.9}
+  .hero-intro{font-size:14px}
+  .field-top>p,.field-case-copy>p,.case-outcomes p,.project-copy>p,.content-grid p,.beyond-copy>p{font-size:13px;line-height:1.95}
+  .field-photo{height:180px;min-height:180px}
+  .project-features p{font-size:12px}
+  .project-features strong{font-size:13px}
+  .background-list p{font-size:12px}
+  .background-list small{font-size:11px}
+  .contact-section p{font-size:13px}
+  .contact-scope{font-size:11px}
+  .detail-inner{font-size:12px}
+  dialog>p,.dialog-project p{font-size:13px}
+  .fitai-visual{min-height:315px;height:315px}
+}
+@media(max-width:370px){.hero-detail{font-size:11px}.hero-intro{font-size:13px}}
+/* Portrait revision: less sky, stronger subject; keep the existing frame. */
+.portrait-frame>img{object-position:53% 70%;transform:scale(1.32);transform-origin:60% 100%}
+/* The disclosure control is not selectable prose: prevent rotated selection fill. */
+.case-detail>summary{-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;background:transparent}
+.case-detail>summary .plus{position:relative;display:block;flex:0 0 20px;width:20px;height:36px;font-size:0;line-height:1;background:transparent;pointer-events:none}
+.case-detail>summary .plus::before,.case-detail>summary .plus::after{content:'';position:absolute;left:50%;top:50%;width:12px;height:1px;background:currentColor;transform:translate(-50%,-50%)}
+.case-detail>summary .plus::after{transform:translate(-50%,-50%) rotate(90deg)}

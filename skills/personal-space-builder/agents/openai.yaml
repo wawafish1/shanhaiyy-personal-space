@@ -1,0 +1,4 @@
+interface:
+  display_name: "Personal Space Builder"
+  short_description: "Build a polished career site from resumes and evidence"
+  default_prompt: "Use $personal-space-builder to turn my resume and materials into a polished public career website."
