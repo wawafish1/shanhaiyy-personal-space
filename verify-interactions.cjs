@@ -105,6 +105,11 @@ for(const name of ['writing','fitai']){
   assert.equal(viewport.scrollY,1800);
 }
 report.push('all four dialogs lock the reading position before showModal and restore scroll/focus on close');
+assert.equal(document.querySelector('.phone-image img').getAttribute('loading'),'eager','FitAI main screenshot must load eagerly');
+const html=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');
+assert.ok(!/[↗↘](?!︎)/u.test(html),'diagonal arrows must force text presentation on iOS');
+assert.ok(html.includes('&#65038;'),'diagonal arrows should include the VS15 text selector');
+report.push('mobile Safari arrows use text presentation, FitAI visual loads eagerly, and dialogs receive neutral programmatic focus');
 assert.equal(document.querySelector('.phone-link').getAttribute('href'),'tel:15861999754');
 assert.ok(document.querySelector('#contact').textContent.includes('To B 销售'));
 const ids=[...document.querySelectorAll('[id]')].map(node=>node.id);
@@ -113,7 +118,8 @@ const assets=new Set();
 for(const node of document.querySelectorAll('[src],link[href],a[href]')){
   const ref=node.getAttribute('src')||node.getAttribute('href');
   if(/^(https?:|mailto:|tel:|#)/.test(ref))continue;
-  assert.ok(fs.existsSync(path.join(__dirname,ref)),`Missing asset: ${ref}`);assets.add(ref);
+  const cleanRef=ref.split(/[?#]/,1)[0];
+  assert.ok(fs.existsSync(path.join(__dirname,cleanRef)),`Missing asset: ${cleanRef}`);assets.add(cleanRef);
 }
 for(const file of ['styles.css','refinements.css','interactions.css','polish.css']) cssTree.parse(fs.readFileSync(path.join(__dirname,file),'utf8'));
 report.push('social screenshot dialogs, external URLs, telephone, copy, IDs, local assets, CSS parse');

@@ -116,3 +116,35 @@ dialog{border-radius:25px;box-shadow:0 30px 100px #0e241c30;border-color:#e2e7d9
   .contact-cv{padding:12px 20px}.footer{font-size:9px}.footer>span:nth-child(2){font-size:8px}dialog{border-radius:21px;padding:25px}.account-shot{border-radius:12px}
 }
 @media(max-width:370px){.hero h1{font-size:26px}.header-cv{font-size:10px}.social-card{padding:14px 10px}.social-top{font-size:8px}.social-card .social-external{min-width:26px}.hero-actions .button{font-size:10px;padding:12px}.contact-section h2{font-size:29px}}
+
+/* Keep diagonal arrows typographic on iOS instead of rendering emoji tiles. */
+.ui-arrow{
+  display:inline-block;
+  font-family:Arial,"Helvetica Neue",sans-serif;
+  font-style:normal;
+  font-weight:400;
+  font-variant-emoji:text;
+  line-height:1;
+}
+
+/* Safari needs an explicit rendered box inside the transformed phone frame. */
+.phone-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  margin:0;
+  transform:none;
+  object-fit:cover;
+  object-position:50% 0;
+}
+
+dialog:focus{outline:none}
+.dialog-close:focus-visible{
+  outline:1px solid #9cab94;
+  outline-offset:2px;
+}
+
+@media(max-width:560px){
+  .dialog-close{font-size:21px;line-height:1}
+}

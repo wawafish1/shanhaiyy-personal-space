@@ -34,7 +34,9 @@ function openDialog(dialog, trigger) {
   document.body.classList.add('modal-open');
   try {
     dialog.showModal();
-    dialog.querySelector('.dialog-close').focus({preventScroll:true});
+    // Focus the dialog container so opening it does not paint the close
+    // button's keyboard-only focus ring on touch devices.
+    dialog.focus?.({preventScroll:true});
     dialog.scrollTop = 0;
   } catch (error) {
     restorePage(dialog);
