@@ -110,6 +110,7 @@ assert.equal(document.querySelector('.phone-image img').getAttribute('loading'),
 for(const selector of ['#x-dialog img','#binance-dialog img']){
   assert.equal(document.querySelector(selector).getAttribute('loading'),'eager',`${selector} must preload before its dialog opens`);
 }
+assert.equal(document.querySelector('#x-dialog img').getAttribute('src'),'assets/account-x-profile.png','X dialog must use the supplied profile screenshot');
 const html=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');
 assert.equal(document.querySelectorAll('.social-external').length,0,'social cards should use the labelled account link rather than redundant icon-only arrows');
 assert.ok(!/[↗↘](?!︎)/u.test(html),'diagonal arrows must force text presentation on iOS');
