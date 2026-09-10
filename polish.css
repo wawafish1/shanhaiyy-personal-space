@@ -63,7 +63,6 @@ nav a:hover{background:#e7ecdf;color:var(--green)}
 .social-card:hover{transform:translateY(-4px);background:#fdfef8;box-shadow:0 13px 30px #244b3d0b}
 .social-top{font-size:11px;gap:8px}
 .social-top b{font-size:22px}
-.social-card .social-external{height:36px;min-width:36px;border-radius:50%;background:#eaf0e2;font-size:19px}
 .social-card .social-account-link{font-size:11px}
 .social-card>strong{margin-block:13px 17px;font-size:55px;line-height:1.3}
 .social-bottom{font-size:11px;align-items:center}
@@ -118,7 +117,7 @@ dialog{border-radius:25px;box-shadow:0 30px 100px #0e241c30;border-color:#e2e7d9
   .case-detail>summary{font-size:12px}.detail-inner{font-size:12px}.process-rail{gap:7px}.process-rail span{font-size:10px;padding:5px 8px}
   .project-card{padding:7px;border-radius:24px}.project-card+.project-card{margin-top:20px}.project-copy{padding:26px 16px}.project-copy>p{font-size:13px}.project-meta{font-size:10px}.project-features p{font-size:12px}
   .project-links{gap:23px}.social-cards{gap:10px}.social-card{padding:15px 12px;border-radius:20px}.social-top{font-size:9px;gap:5px}.social-top b{font-size:18px}
-  .social-card .social-external{min-width:28px;height:28px;font-size:16px}.social-card .social-account-link{font-size:9px}.social-bottom{font-size:9px;gap:5px}.social-card>strong{font-size:44px;margin-block:13px}
+  .social-card .social-account-link{font-size:9px}.social-bottom{font-size:9px;gap:5px}.social-card>strong{font-size:44px;margin-block:13px}
   .content-grid p,.beyond-copy>p{font-size:13px}.life-stage .gallery-slide{border-radius:13px}.background-list article{padding:20px;gap:5px}.background-list small{font-size:11px}
   .contact-section{width:calc(100% - 24px);border-radius:28px}.contact-inner{width:calc(100% - 40px);padding-block:38px}.contact-section h2{font-size:32px}.contact-scope{font-size:11px}
   .contact-cv{padding:12px 20px}.footer{font-size:9px}.footer>span:nth-child(2){font-size:8px}dialog{border-radius:21px;padding:25px}.account-shot{border-radius:12px}
@@ -133,7 +132,7 @@ dialog{border-radius:25px;box-shadow:0 30px 100px #0e241c30;border-color:#e2e7d9
   .hero-actions{gap:14px;margin-top:22px}
   .hero-actions .button{font-size:10px;padding:12px}
   .hero-actions .text-link{font-size:10px}
-  .social-card{padding:14px 10px}.social-top{font-size:8px}.social-card .social-external{min-width:26px}
+  .social-card{padding:14px 10px}.social-top{font-size:8px}
   .contact-section h2{font-size:29px}
 }
 
