@@ -106,6 +106,9 @@ for(const name of ['writing','fitai']){
 }
 report.push('all four dialogs lock the reading position before showModal and restore scroll/focus on close');
 assert.equal(document.querySelector('.phone-image img').getAttribute('loading'),'eager','FitAI main screenshot must load eagerly');
+for(const selector of ['#x-dialog img','#binance-dialog img']){
+  assert.equal(document.querySelector(selector).getAttribute('loading'),'eager',`${selector} must preload before its dialog opens`);
+}
 const html=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');
 assert.ok(!/[↗↘](?!︎)/u.test(html),'diagonal arrows must force text presentation on iOS');
 assert.ok(html.includes('&#65038;'),'diagonal arrows should include the VS15 text selector');

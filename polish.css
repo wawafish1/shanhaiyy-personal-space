@@ -115,7 +115,19 @@ dialog{border-radius:25px;box-shadow:0 30px 100px #0e241c30;border-color:#e2e7d9
   .contact-section{width:calc(100% - 24px);border-radius:28px}.contact-inner{width:calc(100% - 40px);padding-block:38px}.contact-section h2{font-size:32px}.contact-scope{font-size:11px}
   .contact-cv{padding:12px 20px}.footer{font-size:9px}.footer>span:nth-child(2){font-size:8px}dialog{border-radius:21px;padding:25px}.account-shot{border-radius:12px}
 }
-@media(max-width:370px){.hero h1{font-size:26px}.header-cv{font-size:10px}.social-card{padding:14px 10px}.social-top{font-size:8px}.social-card .social-external{min-width:26px}.hero-actions .button{font-size:10px;padding:12px}.contact-section h2{font-size:29px}}
+@media(max-width:370px){
+  .hero h1{font-size:26px}
+  .header-cv{font-size:10px}
+  .hero-portrait{width:90px;top:225px}
+  .portrait-frame{height:125px}
+  .hero-intro{max-width:155px;font-size:12px}
+  .hero-detail{max-width:155px;min-height:145px;font-size:9.5px}
+  .hero-actions{gap:14px;margin-top:22px}
+  .hero-actions .button{font-size:10px;padding:12px}
+  .hero-actions .text-link{font-size:10px}
+  .social-card{padding:14px 10px}.social-top{font-size:8px}.social-card .social-external{min-width:26px}
+  .contact-section h2{font-size:29px}
+}
 
 /* Keep diagonal arrows typographic on iOS instead of rendering emoji tiles. */
 .ui-arrow{
@@ -147,4 +159,8 @@ dialog:focus{outline:none}
 
 @media(max-width:560px){
   .dialog-close{font-size:21px;line-height:1}
+  .menu-toggle{width:40px;height:40px}
+  .header-cv{min-height:40px;display:inline-flex;align-items:center}
+  .gallery-controls button{min-width:40px;height:40px}
+  .account-actions a,.account-actions .dialog-close{width:40px;height:40px}
 }
