@@ -90,7 +90,8 @@ for(const name of ['x','binance']){
   assert.ok(dialog.hasAttribute('open'));
   const expected=name==='x'?'https://x.com/shanhai_y':'https://app.binance.com/uni-qr/cpro/Shanhai_yuyy?l=zh-CN&r=TGE2R26S&uc=web_square_share_link&us=copylink';
   assert.equal(dialog.querySelector('.account-link').getAttribute('href'),expected);
-  assert.equal(dialog.querySelector('.account-actions a').getAttribute('href'),expected);
+  assert.equal(dialog.querySelector('.account-actions a'),null,'account dialogs should have one clear account link below the screenshot');
+  assert.ok(dialog.querySelector('.account-actions .dialog-close'),'account dialogs must retain an accessible close button');
   click(`#${name}-dialog .dialog-close`);
   assert.equal(viewport.scrollY,3200,'closing an account dialog restores the original page position');
   assert.equal(document.body.classList.contains('modal-open'),false);
